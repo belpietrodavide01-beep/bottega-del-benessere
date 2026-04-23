@@ -105,10 +105,10 @@ function ServicePill({ name, img, scale }) {
       <span
         style={{
           color: isMobileScale ? 'rgba(60, 50, 40, 0.9)' : 'rgba(74, 68, 63, 0.85)',
-          fontSize: isMobileScale ? `${7.5 * scale}px` : `${8 * scale}px`,
+          fontSize: isMobileScale ? '10px' : '11px',
           fontFamily: 'Inter, sans-serif',
-          fontWeight: isMobileScale ? 700 : 600,
-          letterSpacing: isMobileScale ? '0.12em' : '0.1em',
+          fontWeight: 800,
+          letterSpacing: isMobileScale ? '0.1em' : '0.1em',
           textTransform: 'uppercase',
           writingMode: 'vertical-rl',
           textOrientation: 'mixed',
