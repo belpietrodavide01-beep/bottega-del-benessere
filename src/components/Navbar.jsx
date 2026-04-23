@@ -1,36 +1,21 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 import SplitText from './react-bits/SplitText'
+import Logo from './Logo'
 
-const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Chi Siamo', href: '#chi-siamo' },
-  { label: 'Servizi', href: '#servizi' },
-  { label: 'Contatti', href: '#contatti' },
-]
-
-export default function Navbar({ menuOpen, setMenuOpen }) {
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
-  const handleLinkClick = (href) => {
-    setMenuOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
-
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 50)
+    const handleResize = () => setIsMobile(window.innerWidth < 768)
     
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
-    handleResize() // Initial check
+    handleResize() 
     
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -38,13 +23,27 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
     }
   }, [])
 
+  const handleLinkClick = (id) => {
+    setMenuOpen(false)
+    const el = document.querySelector(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const navLinks = [
+    { label: 'Chi Siamo', href: '#chi-siamo' },
+    { label: 'Servizi', href: '#servizi' },
+    { label: 'Recensioni', href: '#recensioni' },
+    { label: 'FAQ', href: '#faq' },
+    { label: 'Contatti', href: '#contatti' },
+  ]
+
   return (
     <>
       <motion.header
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className={`${isMobile ? 'sticky top-0 left-0' : 'relative'} w-full z-50 transition-all duration-300 ${isMobile && (isScrolled || menuOpen) ? 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-stone-200/50' : 'bg-transparent'} ${isScrolled ? 'py-1' : 'py-4'}`}
+        className={`${isMobile ? 'sticky top-0 left-0' : 'relative'} w-full z-50 transition-all duration-300 ${isMobile && (isScrolled || menuOpen) ? 'bg-[#faf9f6]/95 backdrop-blur-md border-b border-stone-200/50' : 'bg-transparent'} ${isScrolled ? 'py-1' : 'py-2'}`}
       >
         <nav className="w-full px-4 md:px-6 lg:px-16 h-20 flex items-center justify-between md:grid md:grid-cols-3">
 
@@ -55,14 +54,9 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
               onClick={(e) => { e.preventDefault(); handleLinkClick('#home') }}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="flex-shrink-0 h-14"
+              className="flex-shrink-0"
             >
-              <img 
-                src="/logobenessere.svg" 
-                alt="La Bottega del Benessere" 
-                className="h-full w-auto object-contain" 
-                style={{ filter: 'brightness(0)' }}
-              />
+              <Logo className="scale-[0.8] md:scale-100 origin-left" />
             </motion.a>
           </div>
 

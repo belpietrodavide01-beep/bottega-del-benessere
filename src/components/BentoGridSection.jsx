@@ -262,7 +262,7 @@ export default function BentoGridSection() {
               </div>
               <h3 className="text-[#d565d9] text-6xl font-serif mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>10+</h3>
               <p className="text-black/70 text-[15px] mb-8 max-w-[180px] leading-relaxed">
-                Anni di eccellenza nel settore estetico professionale
+                Anni di esperienza nel settore estetico professionale
               </p>
               <div className="flex flex-wrap gap-2.5 z-10">
                 <span className="px-4 py-1.5 bg-white/90 border border-[#d565d9]/20 rounded-full text-[11px] font-bold tracking-wider text-[#d565d9] uppercase shadow-sm">500+ Clienti</span>

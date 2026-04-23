@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { gsap } from 'gsap'
+import Logo from './Logo'
 
 // ─── Lista servizi con immagini Unsplash affidabili e stabili ───────────────────────────
 const SERVICES = [
@@ -308,17 +309,7 @@ export default function Hero({ isMenuOpen }) {
             pointerEvents: 'none',
           }}
         >
-          <img
-            src="/logobenessere.svg"
-            alt="Bottega del Benessere Logo"
-            style={{
-              width: isMobile ? '38px' : '44px',
-              height: isMobile ? '38px' : '44px',
-              objectFit: 'contain',
-              filter: 'brightness(0)',
-              pointerEvents: 'auto',
-            }}
-          />
+          <Logo className="scale-50 md:scale-[0.6] pointer-events-auto" />
           <span
             style={{
               fontFamily: 'Inter, sans-serif',

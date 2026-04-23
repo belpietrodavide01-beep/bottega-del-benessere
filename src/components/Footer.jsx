@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Phone, Mail, MapPin, Clock, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Logo from './Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,12 +25,7 @@ export default function Footer() {
               onClick={(e) => { e.preventDefault(); handleScroll('#home'); }}
               className="w-32 h-auto"
             >
-              <img 
-                src="/logobenessere.svg" 
-                alt="La Bottega del Benessere Logo" 
-                className="w-full h-auto object-contain" 
-                style={{ filter: 'brightness(0)' }}
-              />
+              <Logo className="scale-75 origin-left" />
             </a>
             <p className="text-stone-500 text-sm leading-relaxed max-w-sm md:max-w-xs">
               L'eccellenza dell'estetica avanzata e del benessere nel cuore della tua città. Trattamenti su misura per una bellezza naturale e senza tempo.
