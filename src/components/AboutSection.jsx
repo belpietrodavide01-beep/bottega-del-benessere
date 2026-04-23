@@ -54,10 +54,11 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-flex flex-row items-center gap-2 px-4 py-1.5 rounded-full mb-8 self-start bg-[#fdf2fd]"
+            className="inline-flex flex-row items-center gap-2 px-4 py-1.5 rounded-full mb-8 self-start"
+            style={{ backgroundColor: '#fef6fe', border: '1px solid rgba(213, 101, 217, 0.15)' }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-black" />
-            <span className="text-[10px] md:text-xs font-bold tracking-[0.15em] text-black uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d565d9]" />
+            <span className="text-[10px] md:text-xs font-bold tracking-[0.15em] text-[#d565d9] uppercase">
               L'arte del benessere
             </span>
           </motion.div>
