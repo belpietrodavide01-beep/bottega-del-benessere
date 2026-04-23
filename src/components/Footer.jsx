@@ -16,10 +16,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         
         {/* Top Section: Brand & Navigation */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-20">
           
           {/* Column 1: Brand */}
-          <div className="col-span-2 lg:col-span-1 flex flex-col items-start text-left gap-6 border-b border-stone-200/40 pb-12 lg:border-0 lg:pb-0">
+          <div className="flex flex-col items-start text-left gap-6 lg:border-0 lg:pb-0">
             <a 
               href="#home" 
               onClick={(e) => { e.preventDefault(); handleScroll('#home'); }}
@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="flex flex-col items-start text-left gap-6">
             <h4 className="text-black font-semibold text-xs tracking-widest uppercase">Navigazione</h4>
             <ul className="flex flex-col gap-4 items-start">
-              {['Chi Siamo', 'Servizi', 'Recensioni', 'FAQ', 'Contatti'].map((link) => (
+              {['Home', 'Chi Siamo', 'Servizi', 'Contatti'].map((link) => (
                 <li key={link}>
                   <button 
                     onClick={() => handleScroll(`#${link.toLowerCase().replace(' ', '-')}`)}
@@ -93,7 +93,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Hours */}
-          <div className="col-span-2 lg:col-span-1 flex flex-col items-start text-left gap-6 pt-12 lg:pt-0 border-t border-stone-200/40 lg:border-0 w-full">
+          <div className="flex flex-col items-start text-left gap-6 lg:pt-0 lg:border-0 w-full">
             <h4 className="text-black font-semibold text-xs tracking-widest uppercase">Orari di Apertura</h4>
             <ul className="flex flex-col gap-3 w-full">
               {[
