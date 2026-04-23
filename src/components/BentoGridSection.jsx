@@ -31,8 +31,8 @@ const REVIEWS = [
 
 const bentoItemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }
   }
@@ -54,11 +54,11 @@ export default function BentoGridSection() {
   return (
     <section className="w-full py-24 md:py-48 lg:py-56 px-6 lg:px-16" style={{ backgroundColor: '#faf9f6' }}>
       <div className="max-w-7xl mx-auto flex flex-col gap-6">
-        
+
         {/* Title Section */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
           {/* Badge Top */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function BentoGridSection() {
             </span>
           </motion.div>
 
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -90,7 +90,7 @@ export default function BentoGridSection() {
         </div>
 
         {/* BENTO GRID */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
@@ -99,18 +99,18 @@ export default function BentoGridSection() {
           }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"
         >
-          
+
           {/* ================= COLUMN 1 ================= */}
           <div className="flex flex-col gap-6 h-full">
-            
+
             {/* Box 1: Before / After */}
-            <motion.div 
+            <motion.div
               variants={bentoItemVariants}
               style={{ willChange: 'transform, opacity' }}
               className="relative w-full h-[320px] md:h-[400px] rounded-[2.5rem] overflow-hidden bg-[#e6ded5] group cursor-pointer shadow-sm"
             >
               <img src="/before-after.png" alt="Risultati Prima e Dopo" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
-              
+
               {/* Labels Prima / Dopo */}
               <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wider uppercase text-black shadow-sm z-10">
                 Prima
@@ -120,7 +120,7 @@ export default function BentoGridSection() {
               </div>
 
               {/* Glass overlay text */}
-              <div 
+              <div
                 className={`absolute inset-x-4 bottom-4 bg-[#d565d9]/80 border border-white/20 rounded-[2rem] flex flex-col ${isMobile ? 'p-6' : 'p-8'} z-10 shadow-2xl`}
                 style={{ transform: 'translateZ(0)' }}
               >
@@ -140,7 +140,7 @@ export default function BentoGridSection() {
                   <span className="flex items-center gap-2 justify-end w-full"><Sparkles size={14} strokeWidth={2.5} /> Laser a Diodo</span>
                 </div>
               </div>
-              
+
               {/* Simulator line */}
               <div className="absolute inset-y-0 left-1/2 w-[1px] bg-white/40 flex items-center justify-center -translate-x-1/2 z-20">
                 <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/40 shadow-lg">
@@ -153,16 +153,16 @@ export default function BentoGridSection() {
             </motion.div>
 
             {/* Box 2: Skin Analysis */}
-            <motion.div 
+            <motion.div
               variants={bentoItemVariants}
               style={{ willChange: 'transform, opacity' }}
               className="w-full flex-grow rounded-[2.5rem] bg-[#fdfcfb] p-10 flex flex-col items-center justify-center text-center shadow-sm border border-stone-200/50"
             >
               <div className="relative mb-6">
-                 {/* Star badge from reference image 2 */}
-                 <div className="w-14 h-14 rounded-full bg-[#fef6fe] border-2 border-[#d565d9]/20 flex items-center justify-center text-[#d565d9] font-bold text-[10px] uppercase tracking-widest shadow-inner">
-                   FREE
-                 </div>
+                {/* Star badge from reference image 2 */}
+                <div className="w-14 h-14 rounded-full bg-[#fef6fe] border-2 border-[#d565d9]/20 flex items-center justify-center text-[#d565d9] font-bold text-[10px] uppercase tracking-widest shadow-inner">
+                  FREE
+                </div>
               </div>
 
               <h3 className="text-black text-3xl font-serif mb-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
@@ -171,8 +171,8 @@ export default function BentoGridSection() {
               <p className="text-black/60 text-base mb-8 max-w-[200px] leading-relaxed">
                 Consulenza esperta completamente gratuita
               </p>
-              
-              <a 
+
+              <a
                 href="https://wa.me/393473127375"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -193,27 +193,27 @@ export default function BentoGridSection() {
           <div className="flex flex-col gap-6 h-full">
 
             {/* Box 3: Seamless Client */}
-            <motion.div 
+            <motion.div
               variants={bentoItemVariants}
               style={{ willChange: 'transform, opacity' }}
-              className={`w-full rounded-[2.5rem] bg-[#fdfcfb] border border-stone-200/50 pt-5 px-7 pb-7 md:pt-6 md:px-8 md:pb-8 relative overflow-hidden shadow-sm flex flex-col ${isMobile ? 'h-[320px]' : 'h-[180px] md:h-[220px]'}`}
+              className={`w-full rounded-[2.5rem] bg-[#fdfcfb] border border-stone-200/50 pt-5 px-6 pb-7 md:pt-6 md:px-8 md:pb-8 relative overflow-hidden shadow-sm flex flex-col ${isMobile ? 'h-[320px]' : 'h-[180px] md:h-[220px]'}`}
             >
               <h3 className="text-black text-2xl md:text-3xl lg:text-4xl font-serif leading-tight z-10 max-w-[220px] mb-2" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                 Un'esperienza cliente impeccabile
               </h3>
               <div className={`absolute ${isMobile ? '-bottom-4 -right-4 w-64 h-64' : '-bottom-6 -right-6 w-52 h-48'} rounded-[2.2rem] overflow-hidden shadow-2xl border-[6px] border-white transition-transform duration-700 ${isMobile ? 'scale-100' : 'hover:scale-110 opacity-90'}`}>
-                <img 
-                  src="/facial-treatment.png" 
-                  alt="Trattamento" 
-                  loading="lazy" 
-                  decoding="async" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src="/facial-treatment.png"
+                  alt="Trattamento"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </motion.div>
 
             {/* Box 4: Tailored to vision */}
-            <motion.div 
+            <motion.div
               variants={bentoItemVariants}
               style={{ willChange: 'transform, opacity' }}
               className="w-full flex-grow rounded-[2.5rem] bg-[#fdfcfb] border border-stone-200/50 p-10 flex flex-col items-center justify-center text-center shadow-sm"
@@ -238,7 +238,7 @@ export default function BentoGridSection() {
             </motion.div>
 
             {/* Box 5: Decorative Bottom */}
-            <motion.div 
+            <motion.div
               variants={bentoItemVariants}
               style={{ willChange: 'transform, opacity' }}
               className={`w-full rounded-[2.5rem] bg-[#e6ded5] overflow-hidden shadow-sm ${isMobile ? 'h-[250px]' : 'h-[150px] md:h-[180px]'}`}
@@ -252,7 +252,7 @@ export default function BentoGridSection() {
           <div className="flex flex-col gap-6 h-full">
 
             {/* Box 6: 10+ Years */}
-            <motion.div 
+            <motion.div
               variants={bentoItemVariants}
               style={{ willChange: 'transform, opacity' }}
               className={`w-full rounded-[2.5rem] bg-[#fef6fe] p-10 relative overflow-hidden shadow-sm flex flex-col justify-center border border-[#d565d9]/10 ${isMobile ? 'h-[320px]' : 'h-[180px] md:h-[220px]'}`}
@@ -271,7 +271,7 @@ export default function BentoGridSection() {
             </motion.div>
 
             {/* Box 7: Looping Reviews */}
-            <motion.div 
+            <motion.div
               variants={bentoItemVariants}
               className="w-full flex-grow rounded-[2rem] bg-[#fdfcfb] border border-stone-200/50 p-8 flex flex-col shadow-sm overflow-hidden h-[350px] md:h-[450px]"
             >
@@ -287,9 +287,9 @@ export default function BentoGridSection() {
               {/* Masking Container for Marquee */}
               <div className="relative flex-1 overflow-hidden mask-image-bento" ref={marqueeRef}>
                 {/* Due div iterati per creare l'effetto loop continuo */}
-                <div 
+                <div
                   className="flex flex-col gap-4 animate-marquee-vertical"
-                  style={{ 
+                  style={{
                     animationPlayState: isInView ? 'running' : 'paused',
                   }}
                 >
@@ -326,10 +326,11 @@ export default function BentoGridSection() {
                 </div>
               </div>
               {/* CSS inline trick block per lo sbiadimento in alto/basso per le recensioni */}
-              <style dangerouslySetInnerHTML={{__html: `
+              <style dangerouslySetInnerHTML={{
+                __html: `
                 .mask-image-bento {
-                  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
-                  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+                  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+                  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
                 }
               `}} />
 

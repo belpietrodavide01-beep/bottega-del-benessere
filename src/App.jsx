@@ -66,7 +66,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#faf9f6' }}>
+    <div className="min-h-screen overflow-x-hidden w-full" style={{ backgroundColor: '#faf9f6' }}>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       <Hero isMenuOpen={menuOpen} />

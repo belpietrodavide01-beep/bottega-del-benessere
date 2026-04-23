@@ -74,10 +74,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@angolovero.it" className="flex items-start gap-3 group">
+                <a href="mailto:info@labottegadelbenessere.it" className="flex items-start gap-3 group">
                   <Mail size={18} className="text-[#d565d9] shrink-0" />
                   <div className="flex flex-col">
-                    <span className="text-black font-medium text-sm">info@angolovero.it</span>
+                    <span className="text-black font-medium text-sm">info@labottegadelbenessere.it</span>
                     <span className="text-stone-400 text-xs">Inviaci una richiesta</span>
                   </div>
                 </a>

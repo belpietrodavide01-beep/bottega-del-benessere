@@ -162,7 +162,7 @@ export default function Hero({ isMenuOpen }) {
     <section
       id="home"
       ref={sectionRef}
-      className="min-h-screen flex flex-col items-center justify-start px-6 lg:px-16 pt-0 pb-0"
+      className="min-h-screen flex flex-col items-center justify-start px-6 lg:px-16 pt-24 md:pt-32 pb-0"
       style={{ backgroundColor: '#faf9f6', contain: 'paint layout' }}
     >
       <div className="relative w-full" style={{ 
@@ -210,7 +210,7 @@ export default function Hero({ isMenuOpen }) {
           />
 
           <div
-            className={`absolute inset-x-0 flex flex-col items-center text-center px-6 z-30 ${isMobile ? 'top-[18%]' : 'top-[15%]'}`}
+            className={`absolute inset-x-0 flex flex-col items-center text-center px-6 z-30 ${isMobile ? 'top-[14%]' : 'top-[10%]'}`}
             style={{ pointerEvents: 'none', willChange: 'transform, opacity' }}
           >
             <motion.h1
@@ -300,16 +300,16 @@ export default function Hero({ isMenuOpen }) {
         />
 
         <div
-          className="absolute z-50 flex flex-col items-center justify-center pt-10 pb-6"
+          className="absolute z-50 flex flex-col items-center justify-center pt-2 pb-0"
           style={{
             width: `${notchW}px`,
-            bottom: isMobile ? '-15px' : '-20px',
+            bottom: isMobile ? '8px' : '12px',
             left: '50%',
             transform: 'translateX(-50%)',
             pointerEvents: 'none',
           }}
         >
-          <Logo className="scale-50 md:scale-[0.6] pointer-events-auto" />
+          <Logo className="scale-[0.7] md:scale-[0.85] pointer-events-auto" />
           <span
             style={{
               fontFamily: 'Inter, sans-serif',
