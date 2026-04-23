@@ -89,7 +89,7 @@ export default function TestimonialSection() {
               <h3 className="text-6xl font-serif text-black leading-none" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                 99%
               </h3>
-              <p className="text-[12px] font-bold tracking-[0.15em] text-[#d565d9] uppercase">
+              <p className="text-[13px] font-bold tracking-[0.1em] text-[#d565d9] uppercase">
                 500+ clienti totalmente soddisfatti
               </p>
             </div>
@@ -203,7 +203,7 @@ export default function TestimonialSection() {
               <div className="flex items-center gap-1 mb-2">
                  {[...Array(5)].map((_, i) => <Star key={i} size={10} className="fill-white text-white" />)}
               </div>
-              <p className="text-white text-[10px] font-bold tracking-[0.1em] mb-6">
+              <p className="text-white text-[12px] font-bold tracking-[0.1em] mb-6">
                 VALUTAZIONE CLIENTI
               </p>
               

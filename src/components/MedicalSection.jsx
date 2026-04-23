@@ -20,7 +20,7 @@ export default function MedicalSection() {
             style={{ backgroundColor: '#fef6fe', border: '1px solid rgba(213, 101, 217, 0.15)' }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#d565d9]" />
-            <span className="text-[10px] md:text-xs font-bold tracking-[0.15em] text-[#d565d9] uppercase">
+            <span className="text-[11px] md:text-xs font-bold tracking-[0.1em] text-[#d565d9] uppercase">
               Estetica Avanzata
             </span>
           </motion.div>
